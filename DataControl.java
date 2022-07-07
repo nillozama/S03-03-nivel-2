@@ -36,7 +36,7 @@ public class DataControl {
 		     }
 			if (m == 1) {
 		    	
-		        System.out.println("S'ha realitzat correctamente la inserció : "+sql);
+		        System.out.println("S'ha realitzat correctament la inserció : "+sql);
 		    }else {
 		    	
 		        System.out.println("Error en la inserció.");
@@ -70,7 +70,7 @@ public class DataControl {
 		    
 			if (m == 1) {
 		    	
-		        System.out.println("S'ha realitzat correctamente la inserció : "+sql);
+		        System.out.println("S'ha realitzat correctament la inserció : "+sql);
 		    }else {
 		    	
 		        System.out.println("Error en la inserció.");
@@ -191,7 +191,7 @@ public class DataControl {
 
 		} catch (SQLException e) {
 			
-			System.out.println("Falla por esto");
+			System.out.println("La consulta ha fallat amb el següent missatge:");
 			
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -275,7 +275,7 @@ public class DataControl {
 			m = connect.createStatement().executeUpdate(sql);
 			if (m == 1) {
 		    	
-		        System.out.println("S'ha eliminat el producte am ID : "+itemToDelate);
+		        System.out.println("S'ha eliminat el producte amb ID : "+itemToDelate);
 		    }else {
 		    	
 		        System.out.println("Error en la eliminació.");
@@ -301,7 +301,7 @@ public class DataControl {
 		    
 			if (m == 1) {
 		    	
-		        System.out.println("S'ha realitzat correctamente la inserció : "+sql);
+		        System.out.println("S'ha realitzat correctament la inserció : "+sql);
 		    }else {
 		    	
 		        System.out.println("Error en la inserció.");
