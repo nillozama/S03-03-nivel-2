@@ -1,4 +1,4 @@
-package Nivell2;
+package nivell2;
 
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -15,6 +15,8 @@ public class DataControl {
 	public DataControl() {
 		
 		connect=DatabaseConnection.getConnect();
+		
+		
 	}
 	
 	public int createTicket (int shop_idshop) {
@@ -23,7 +25,7 @@ public class DataControl {
 		int m=0;
 		Statement s;
 		int result=0;
-	            
+	      
 	    sql = "insert into ticket(date, shop_idshop) "
 	            		+ "values(now(),"+shop_idshop+")";
 	    try {

@@ -1,4 +1,4 @@
-package Nivell2;
+package nivell2;
 
 import java.sql.*;
 
@@ -14,8 +14,8 @@ public class DatabaseConnection {
 		
 		url = "jdbc:mysql://localhost:3306/floristeriapepadb";
 	    driver = "com.mysql.cj.jdbc.Driver";
-	    usuario = "root";
-	    password = "Admin&Admin";
+	    usuario = "test"; // "root";
+	    password = "1234"; // "Admin&Admin";
 	 
 	    try{
 	    	
