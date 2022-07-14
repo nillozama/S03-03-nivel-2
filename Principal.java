@@ -1,6 +1,7 @@
 package nivell2;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -275,7 +276,8 @@ public class Principal {
 					removeItemFromStockbyId(productToSale);
 					productId.add(productToSale.getId());
 
-				} else if (valueSelected == 0 || stock.size() == 0) {
+				} 
+				if (valueSelected == 0 || stock.size() == 0) {
 
 					if (stock.size() == 0) {
 						System.out.println("No queden productes per comprar.");
@@ -331,25 +333,41 @@ public class Principal {
 		return string;
 	}
 
-	public static int requireIntNumber(String message) {
-
+	public static int requireIntNumber(String missatge) {
+		int input=0;
+		boolean inputCorrecte = false;
 		Scanner sc = new Scanner(System.in);
-		int num;
-
-		System.out.println(message);
-		num = sc.nextInt();
-
-		return num;
+		
+		do {
+			System.out.println(missatge);
+			try {
+				input = sc.nextInt();
+				inputCorrecte = true;
+			} catch (InputMismatchException e) {
+				System.out.println("No s'ha introduït el tipus de dades esperat");
+				sc.next();
+			}
+		} while (!inputCorrecte);
+		
+		return input;
 	}
 
-	public static float requireFloatNumber(String message) {
-
+	public static float requireFloatNumber(String missatge) {
+		float input=0;
+		boolean inputCorrecte = false;
 		Scanner sc = new Scanner(System.in);
-		float num;
-
-		System.out.println(message);
-		num = sc.nextFloat();
-
-		return num;
+		
+		do {
+			System.out.println(missatge);
+			try {
+				input=sc.nextFloat();
+				inputCorrecte = true;
+			} catch (InputMismatchException e) {
+				System.out.println("No s'ha introduït el tipus de dades esperat");
+				sc.next();
+			}
+		} while (!inputCorrecte);
+		
+		return input;
 	}
 }
