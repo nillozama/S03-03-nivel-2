@@ -1,4 +1,4 @@
-package Nivell2;
+package nivell2;
 
 import java.sql.Date;
 

@@ -1,4 +1,4 @@
-package Nivell2;
+package nivell2;
 import java.util.ArrayList;
 import java.util.List;
 
